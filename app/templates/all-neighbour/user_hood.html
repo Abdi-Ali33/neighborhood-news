@@ -5,7 +5,7 @@
 {% block content %} 
 {{ block.super}}
     <div class="container-fluid">
-        <h2 class="text-center mt-3 orange">My Hood: {{user.profile.neighbourhood.name|title}}</h2>
+        <h2 class="text-center mt-3 ">Neighbourbood Details</h2>
         <div class="hood-cont p-2 card mt-3" >
             <div class="row">
                 <div class="col-md-4">
@@ -14,7 +14,7 @@
                 <div class="col-md-2">
                     <h4 class="card-title">{{hood.name|title}}</h4>
                     <p>Locaton: {{hood.location}}</p>
-                    <a href="{% url 'leave_hood' hood.id %}" class="btn btn-outline-warning font-weight-bold btn-sm mt-5 mb-1">LEAVE HOOD</a> 
+                    <a href="{% url 'leave_hood' hood.id %}" class="btn btn-outline-warning  btn-sm mt-5 mb-1">LEAVE</a> 
                      {%if hood.admin == current_user%}
                       <p class="ml-4">
                           <a href="{% url 'update_hood' hood.id %}"><i class="fas fa-edit"></i></a>
@@ -23,9 +23,9 @@
                        {%endif%}
                 </div>
                 <div class="col-md-3">
-                    <p><span class="font-weight-bold">Hood Administrator:</span>  {{hood.area_administrator}}</p>
-                    <p><span class="font-weight-bold">Health Department:</span>  {{hood.health_tell}}</p>
-                    <p><span class="font-weight-bold">Police Authorities:</span>  {{hood.police_number}}</p>
+                    <!-- <p><span class="font-weight-bold">Hood Administrator:</span>  {{hood.area_administrator}}</p> -->
+                    <p><span class="font-weight-bold">Health Department:</span>  {{hood.Health_Contact}}</p>
+                    <p><span class="font-weight-bold">Police Authorities:</span>  {{hood.Police_Contact}}</p>
                     <p><a href="#members" class="black"><span class="font-weight-bold">Member{{hood.members.count|pluralize}}:</span>  {{hood.members.count}}</a></p>
                 </div>
                 <div class="col-md-3">
@@ -48,8 +48,8 @@
             {% endif %}
             <div class="row">
                 <div class="col-md-5">
-                    <h3 class="text-center mt-3 orange">Businesses</h3>
-                    <a href="{% url 'newbusiness' hood.id%}" class="btn join black font-weight-bol btn-sm mb-2"><i class="fas fa-plus"></i> Business</a>
+                    <h3 class="text-center mt-3 ">Businesses</h3>
+                    <a href="{% url 'newbusiness' hood.id%}" class="btn join black font-weight-bol btn-sm mb-2">ADD BUSINESS</a>
                     {% for business in businesses%}
                     <div class="flex">
                         <img src="{{business.business_photo.url}}" alt="" height="130" width="150">
@@ -98,8 +98,8 @@
                 </div>
                 <div class="col-md-1"></div>
                 <div class="col-md-5">
-                    <h3 class="text-center mt-3 orange">Posts</h3>
-                    <a href="{% url 'newpost' hood.id%}" class="btn join black font-weight-bol btn-sm mb-2 post-btn"><i class="fas fa-plus"></i> Post</a>
+                    <h3 class="text-center mt-3 ">Posts</h3>
+                    <a href="{% url 'newpost' hood.id%}" class="btn join black font-weight-bol btn-sm mb-2 post-btn">ADD POSTS</a>
                     {% for post in posts%}
                     <div class="post-hold mb-2">
                         <h6 class="font-weight-bold">{{post.title}}</h6>
@@ -120,8 +120,8 @@
     
         </div>
     </div>
-    <div class="container pt-4 mb-3">
-        <h3 class="text-center mt-3 orange">Members</h3>
+    <!-- <div class="container pt-4 mb-3">
+        <h3 class="text-center mt-3 ">Members</h3>
         {% for member in members%}
         {% if member.user.username == current_user.username%}
         <div class="card p-3">
@@ -164,7 +164,7 @@
         </div>
         {%endif%}
         {%endfor%}
-    </div>
+    </div> -->
     <!-- <footer class="pt-1 pb-1">
         <div class="container">
         <div class="">

@@ -10,7 +10,7 @@ class NeighbourHood(models.Model):
     location = models.CharField(max_length=100)
     admin = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="hood", null=True)
-    hood_pic = models.ImageField(upload_to='images/')
+    hood_logo = models.ImageField(upload_to='images/')
     description = models.TextField()
     Health_Contact = models.IntegerField(null=True, blank=True)
     Police_Contact = models.IntegerField(null=True, blank=True)
@@ -46,7 +46,7 @@ class Profile(models.Model):
     name = models.CharField(blank=True, max_length=120)
     profile_pic = models.ImageField(
         upload_to='images/', default='profile.jfif')
-    phone_number = models.IntegerField(max_length=15, blank=True)
+    phone_number = models.IntegerField(blank=True)
     neighbourhood = models.ForeignKey(
         NeighbourHood, on_delete=models.SET_NULL, null=True, related_name='members', blank=True)
 
@@ -91,7 +91,7 @@ class Business(models.Model):
     business_photo = models.ImageField(upload_to='images/')
     owner = models.ForeignKey(
         Profile, on_delete=models.CASCADE, related_name='owner')
-    phone_number = PhoneField(null=True, blank=True)
+    phone_number = models.IntegerField(null=True, blank=True)
 
     class Meta:
         ordering = ['-pk']

@@ -4,7 +4,7 @@
 {% load bootstrap4 %}
 {% block content%}
 {{block.super}}
-<div class="sign1">
+<div class="sign3">
     <div class="row">
         <div class="col-md-3"></div>
        
@@ -16,7 +16,7 @@
                     <form action="" method="post" class="mb-2" enctype="multipart/form-data">
                         {% csrf_token%}
                         {{ form|crispy}}
-                        <button type="submit" class="btn btn-color green text-white"> {{title}}</button>
+                        <button type="submit" class="join login text-white"> {{title}} ADD</button>
                     </form>
                  
                                      
