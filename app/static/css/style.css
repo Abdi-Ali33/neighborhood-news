@@ -22,12 +22,17 @@ body{
     font-family: 'lato', sans-serif;
     overflow-x:hidden !important;
 }
-.navbar{
-    /* background-color:#161c2d !important;  */
+
+/* .navbar{
+    
     background-color:rgb(4, 63, 63)!important; 
+} */
+.nav-link{
+    background-color: green !important;
 }
 .nav-link:hover{
     font-weight: bold !important;
+    
 }
 .background{
     background-image: url(/static/photos/hood1.webp);
@@ -83,12 +88,12 @@ footer{
     margin-left: 50% !important;
 }
 .btn-color{
-    background-color: rgb(4, 63, 63) !important;
+    background-color: green;
     font-size: 15px !important;
-    color: white !important;
+    color: rgb(156, 25, 25) !important;
 }
 .link-color{
-    color: rgb(4, 63, 63) !important;
+    color: rgb(13, 211, 56) !important;
    
 }
 .link-color:hover {
@@ -96,7 +101,7 @@ footer{
     text-decoration: none;
 }
 .btn-color:hover{
-    background-color: orange !important;
+    background-color: rgb(60, 255, 0) !important;
 }
 .login{
     width: 100%;

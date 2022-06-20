@@ -15,13 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from neighbour import views as neighbour_views
+from app import views as neighbour_views
 from django.contrib.auth import views as auth_views
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('neighbour.urls')),
+    path('', include('app.urls')),
     path('tinymce /', include('tinymce.urls')),
     path('accounts/register/', neighbour_views.register, name='register'),
     path('accounts/login/',

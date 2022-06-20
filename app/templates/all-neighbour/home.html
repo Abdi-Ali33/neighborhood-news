@@ -12,11 +12,11 @@
     </h6>
     {% if request.user.profile.neighbourhood %}
     {%else%}
-    <a href="{%url 'hoods'%}" class="btn mt-4 btn-warning pl-4 pr-4 font-weight-bold black">JOIN HOOD</a>
+    <!-- <a href="{%url 'hoods'%}" class="btn mt-4 btn-warning pl-4 pr-4 font-weight-bold black">JOIN HOOD</a> -->
     {%endif%}
  
 </div>
-<div class="container mt-5 mb-3">
+<!-- <div class="container mt-5 mb-3">
     <div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-4">
@@ -34,8 +34,8 @@
         </div>
         <div class="col-md-1"></div>
     </div>
-</div>
-<div class="container pt-3 mt-5 mb-3">
+</div> -->
+<!-- <div class="container pt-3 mt-5 mb-3">
     <div class="row values">
         <div class="col-md-1"></div>
         <div class="col-md-4 p-1">
@@ -56,16 +56,16 @@
         <div class="col-md-1"></div>
     </div>
 
-</div>
-<div class="container pt-4">
+</div> -->
+<!-- <div class="container pt-4">
     {% if user.is_authenticated %}
     {%else%}
     <h2 class="font-weight-bold hoodapp text-center">Instantly connect with your neighborhood</h2>
     <p class="text-center"><a href="{%url 'register'%}" class="btn mt-4 join pl-4 pr-4 font-weight-bold black">SIGN UP</a></p>
     {%endif%}
    
-</div>
-<footer class="pt-1 pb-1">
+</div> -->
+<!-- <footer class="pt-1 pb-1">
     <div class="container">
     <div class="">
     <div class=" mt-2">
@@ -74,5 +74,5 @@
     </div>
     </div>
 
-</footer>
+</footer> -->
 {%endblock%}
