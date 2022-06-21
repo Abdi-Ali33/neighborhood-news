@@ -31,12 +31,9 @@ body{
     to {transform: translateY(200px);}
 }
 
-/* .navbar{
-    
-    background-color:rgb(4, 63, 63)!important; 
-} */
+
 .nav-link{
-    /* background-color: green !important; */
+    
     color:white;
 }
 .nav-link:hover{
@@ -44,13 +41,7 @@ body{
     color:#BD4291;
     
 }
-/* .background{
-    background-image: url(/app/static/);
-    height: 580px;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    color: white;
-} */
+
 #images{
     background-image:url(/static/photos/image10.jpg) ;
     height: 580px;
@@ -97,12 +88,7 @@ body{
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
-/* .sign1{
-    background-image: url(/static/photos/sign.png);
-    height: fit-content;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-} */
+
 .intro{
     padding-top: 6%;
     font-size: 60px !important;
