@@ -34,7 +34,7 @@ SECRET_KEY = 'django-insecure-zs*#@3x3(=-(gaqoaf3r#1r9)na0ek76(tz3w86l%==4dpr)8c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['neighborhood-news1.herokuapp.com']
 
 
 # Application definition
@@ -161,7 +161,7 @@ CLOUDINARY_STORAGE = {
     'API_KEY': '242373711326286',
     'API_SECRET': 'PuUk1vItNok1vgHh8jd3ey2e5Os',
 }
-# DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
