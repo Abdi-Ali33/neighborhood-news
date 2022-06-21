@@ -34,7 +34,7 @@ SECRET_KEY = 'django-insecure-zs*#@3x3(=-(gaqoaf3r#1r9)na0ek76(tz3w86l%==4dpr)8c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['neighborhood-news1.herokuapp.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -94,17 +94,22 @@ WSGI_APPLICATION = 'neighborhood.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'd886e2dhejmmdi',
+#         'USER': 'jvubuhodxowglu',
+#         'PASSWORD': 'a386d6b2259a4ca8f979475407fe4b4076dd0a7f9897d45558a48024ef8fcc1d',
+#         'HOST': 'ec2-34-227-120-79.compute-1.amazonaws.com',
+#         'PORT': '5432',
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd886e2dhejmmdi',
-        'USER': 'jvubuhodxowglu',
-        'PASSWORD': 'a386d6b2259a4ca8f979475407fe4b4076dd0a7f9897d45558a48024ef8fcc1d',
-        'HOST': 'ec2-34-227-120-79.compute-1.amazonaws.com',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
 
