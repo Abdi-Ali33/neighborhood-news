@@ -50,7 +50,7 @@ The following technologies have been used on this project:
 * Python
 
 ## Live link
-[Here is the link to the live site]()
+[Here is the link to the live site](hoodwtch.herokuapp.com/)
 
 # License
 
